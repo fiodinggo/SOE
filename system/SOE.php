@@ -233,7 +233,57 @@ class SOE extends Controlling {
     public function httpstatus($kode) {
         $httpstatus = array(
             '200' => $_SERVER['SERVER_PROTOCOL'] . ' 200 Ok',
-            '404' => $_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found'
+            '201' => $_SERVER['SERVER_PROTOCOL'] . ' 201 Created',
+            '202' => $_SERVER['SERVER_PROTOCOL'] . ' 202 Accepted',
+            '203' => $_SERVER['SERVER_PROTOCOL'] . ' 203 Non-Authoritative Information',
+            '204' => $_SERVER['SERVER_PROTOCOL'] . ' 204 No Content',
+            '205' => $_SERVER['SERVER_PROTOCOL'] . ' 205 Reset Content',
+            '206' => $_SERVER['SERVER_PROTOCOL'] . ' 206 Partial Content',
+            
+            '300' => $_SERVER['SERVER_PROTOCOL'] . ' 300 Multiple Choice',
+            '301' => $_SERVER['SERVER_PROTOCOL'] . ' 301 Moved Permanently',
+            '302' => $_SERVER['SERVER_PROTOCOL'] . ' 302 Found',
+            '303' => $_SERVER['SERVER_PROTOCOL'] . ' 303 See Other',
+            '304' => $_SERVER['SERVER_PROTOCOL'] . ' 304 Not Modified',
+            '305' => $_SERVER['SERVER_PROTOCOL'] . ' 305 Use Proxy',
+            '306' => $_SERVER['SERVER_PROTOCOL'] . ' 306 unused',
+            '307' => $_SERVER['SERVER_PROTOCOL'] . ' 307 Temporary Redirect',
+            '308' => $_SERVER['SERVER_PROTOCOL'] . ' 308 Permanent Redirect',
+            
+            '400' => $_SERVER['SERVER_PROTOCOL'] . ' 400 Bad Request',
+            '401' => $_SERVER['SERVER_PROTOCOL'] . ' 401 Unauthorized',
+            '402' => $_SERVER['SERVER_PROTOCOL'] . ' 402 Payment Required',
+            '403' => $_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden',
+            '404' => $_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found',
+            '405' => $_SERVER['SERVER_PROTOCOL'] . ' 405 Method Not Allowed',
+            '406' => $_SERVER['SERVER_PROTOCOL'] . ' 406 Not Acceptable',
+            '407' => $_SERVER['SERVER_PROTOCOL'] . ' 407 Proxy Authentication Required',
+            '408' => $_SERVER['SERVER_PROTOCOL'] . ' 408 Request Timeout',
+            '409' => $_SERVER['SERVER_PROTOCOL'] . ' 409 Conflict',
+            '410' => $_SERVER['SERVER_PROTOCOL'] . ' 410 Gone',
+            '411' => $_SERVER['SERVER_PROTOCOL'] . ' 411 Length Required',
+            '412' => $_SERVER['SERVER_PROTOCOL'] . ' 412 Precondition Failed',
+            '413' => $_SERVER['SERVER_PROTOCOL'] . ' 413 Payload Too Large',
+            '414' => $_SERVER['SERVER_PROTOCOL'] . ' 414 URI Too Long',
+            '415' => $_SERVER['SERVER_PROTOCOL'] . ' 415 Unsupported Media Type',
+            '416' => $_SERVER['SERVER_PROTOCOL'] . ' 416 Requested Range Not Satisfiable',
+            '417' => $_SERVER['SERVER_PROTOCOL'] . ' 417 Expectation Failed',
+            '421' => $_SERVER['SERVER_PROTOCOL'] . ' 421 Misdirected Request',
+            '426' => $_SERVER['SERVER_PROTOCOL'] . ' 426 Upgrade Required',
+            '428' => $_SERVER['SERVER_PROTOCOL'] . ' 428 Precondition Required',
+            '429' => $_SERVER['SERVER_PROTOCOL'] . ' 429 Too Many Requests',
+            '431' => $_SERVER['SERVER_PROTOCOL'] . ' 431 Request Header Fields Too Large',
+            '451' => $_SERVER['SERVER_PROTOCOL'] . ' 451 Unavailable For Legal Reasons',
+            
+            '500' => $_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error',
+            '501' => $_SERVER['SERVER_PROTOCOL'] . ' 501 Not Implemented',
+            '502' => $_SERVER['SERVER_PROTOCOL'] . ' 502 Bad Gateway',
+            '503' => $_SERVER['SERVER_PROTOCOL'] . ' 503 Service Unavailable',
+            '504' => $_SERVER['SERVER_PROTOCOL'] . ' 504 Gateway Timeout',
+            '505' => $_SERVER['SERVER_PROTOCOL'] . ' 505 HTTP Version Not Supported',
+            '506' => $_SERVER['SERVER_PROTOCOL'] . ' 506 Variant Also Negotiates',
+            '507' => $_SERVER['SERVER_PROTOCOL'] . ' 507 Variant Also Negotiates',
+            '511' => $_SERVER['SERVER_PROTOCOL'] . ' 511 Network Authentication Required'
         );
         header($httpstatus[$kode]);
     }
