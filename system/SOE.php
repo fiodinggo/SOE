@@ -385,7 +385,7 @@ class Controlling {
         }
         return $list;
     }
-
+    // from codeigniter
     public function input($prm = '', $xss_clean = null) {
         is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
         $param = $this->extract_parameter();
