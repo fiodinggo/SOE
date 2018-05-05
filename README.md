@@ -1,2 +1,2 @@
 # SOE
-Lightweight, easy and simple RESTFul Framework
+Lightweight, easy and simple RESTFul Framework.
