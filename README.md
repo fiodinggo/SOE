@@ -1,2 +1,2 @@
 # SOE
-Lightweight, easy and simple RESTFul Framework.
+SOE is a small, simple and fast php Framework for RESTFul.
