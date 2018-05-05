@@ -162,9 +162,12 @@ class SOE extends Controlling {
         $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
         $requesturl = '/' . substr($actvurl, strlen($base_url), strlen($actvurl));
 //        echo '<pre>';
-//        print_r($this->middlewares[$this->method][$requesturl]);
+//        print_r($this->middlewares[$this->method][$requesturl]['fn']);
 //        echo '</pre>';
-        ((isset($this->pola[$this->method][$requesturl]) && $this->pola[$this->method][$requesturl] == 'middleware') ? $this->handle($this->middlewares[$this->method][$requesturl]['fn']) : '');
+//        echo '<pre>';
+//        print_r($this->pola[$this->method][$requesturl]);
+//        echo '</pre>';
+        ((isset($this->pola[$this->method][$requesturl]) && $this->pola[$this->method][$requesturl] == 'middleware') ? call_user_func($this->middlewares[$this->method][$requesturl]['fn']) : '');
         $this->execute($callback);
     }
 
@@ -385,7 +388,7 @@ class Controlling {
         }
         return $list;
     }
-    // from codeigniter
+
     public function input($prm = '', $xss_clean = null) {
         is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
         $param = $this->extract_parameter();
