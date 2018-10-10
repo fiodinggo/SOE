@@ -8,7 +8,7 @@
  */
 $app = new system\SOE();
 $app->get('/', function() {
-    echo 'test';
+    echo 'try';
 }, 'Home');
 $app->middleware('GET|POST', '/*', function () {
     echo 'middleware ------------ <br>';
